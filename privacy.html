@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politique de Confidentialité - My Tennis Coach</title>
+    <title>Privacy Policy - My Tennis Coach</title>
     <style>
         * {
             margin: 0;
@@ -24,6 +25,28 @@
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .lang-switcher {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .lang-switcher a {
+            display: inline-block;
+            padding: 8px 16px;
+            margin-left: 8px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .lang-switcher a.active {
+            background-color: #2e7d32;
+            color: #fff;
+        }
+        .lang-switcher a:not(.active) {
+            background-color: #e8f5e9;
+            color: #2e7d32;
         }
         h1 {
             color: #2e7d32;
@@ -71,89 +94,205 @@
         a {
             color: #2e7d32;
         }
+        .lang-section {
+            display: none;
+        }
+        .lang-section.active {
+            display: block;
+        }
+        .divider {
+            border: none;
+            border-top: 2px solid #e8f5e9;
+            margin: 40px 0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🔒 Politique de Confidentialité</h1>
-        <p class="app-name">My Tennis Coach</p>
-        <p class="update-date">Dernière mise à jour : Janvier 2025</p>
-
-        <div class="highlight">
-            <strong>En résumé :</strong> Nous collectons uniquement les données nécessaires au fonctionnement de l'application. Vos données ne sont jamais vendues ni partagées avec des tiers à des fins commerciales.
+        <div class="lang-switcher">
+            <a id="btn-en" class="active" onclick="switchLang('en')">English</a>
+            <a id="btn-fr" onclick="switchLang('fr')">Fran&ccedil;ais</a>
         </div>
 
-        <h2>1. Qui sommes-nous ?</h2>
-        <p>My Tennis Coach est une application mobile développée pour aider les joueurs de tennis à suivre leurs sessions et progresser dans leur jeu. L'application est éditée par un développeur indépendant basé en France.</p>
+        <!-- ENGLISH VERSION -->
+        <div id="lang-en" class="lang-section active">
+            <h1>Privacy Policy</h1>
+            <p class="app-name">My Tennis Coach</p>
+            <p class="update-date">Last updated: April 2026</p>
 
-        <h2>2. Quelles données collectons-nous ?</h2>
-        <p>Nous collectons les données suivantes :</p>
-        <ul>
-            <li><strong>Données de compte :</strong> Adresse email (pour la création de compte et l'authentification)</li>
-            <li><strong>Données de session :</strong> Type de session, surface, score, adversaire, notes personnelles, date et lieu</li>
-            <li><strong>Données de préparation :</strong> Checklist personnalisée, mantras, préférences</li>
-            <li><strong>Données techniques :</strong> Identifiant unique de l'appareil, pour le bon fonctionnement de l'application</li>
-        </ul>
+            <div class="highlight">
+                <strong>In short:</strong> We only collect the data necessary for the app to function. Your data is never sold or shared with third parties for commercial purposes.
+            </div>
 
-        <h2>3. Comment utilisons-nous vos données ?</h2>
-        <p>Vos données sont utilisées pour :</p>
-        <ul>
-            <li>Permettre le fonctionnement de l'application (enregistrement et affichage de vos sessions)</li>
-            <li>Générer des analyses et conseils personnalisés via notre Coach IA</li>
-            <li>Sauvegarder vos préférences et paramètres</li>
-            <li>Améliorer l'application (statistiques anonymes d'utilisation)</li>
-        </ul>
+            <h2>1. Who are we?</h2>
+            <p>My Tennis Coach is a mobile application designed to help tennis players track their sessions and improve their game. The application is published by an independent developer based in France.</p>
 
-        <h2>4. Intelligence Artificielle</h2>
-        <p>Notre application utilise l'API Claude d'Anthropic pour générer des analyses et conseils personnalisés. Lorsque vous utilisez les fonctionnalités de Coach IA ou de dictée :</p>
-        <ul>
-            <li>Le contenu de vos sessions est envoyé à l'API pour analyse</li>
-            <li>Ces données sont traitées de manière sécurisée et ne sont pas utilisées pour entraîner des modèles</li>
-            <li>Anthropic s'engage à ne pas conserver vos données au-delà du traitement de la requête</li>
-        </ul>
+            <h2>2. What data do we collect?</h2>
+            <p>We collect the following data:</p>
+            <ul>
+                <li><strong>Account data:</strong> Email address (for account creation and authentication)</li>
+                <li><strong>Session data:</strong> Session type, surface, score, opponent, personal notes, date and location</li>
+                <li><strong>Preparation data:</strong> Custom checklist, mantras, preferences</li>
+                <li><strong>Technical data:</strong> Unique device identifier, for the proper functioning of the application</li>
+            </ul>
 
-        <h2>5. Où sont stockées vos données ?</h2>
-        <p>Vos données sont stockées de manière sécurisée sur les serveurs de Supabase, hébergés dans l'Union Européenne. Les communications sont chiffrées via HTTPS.</p>
+            <h2>3. How do we use your data?</h2>
+            <p>Your data is used to:</p>
+            <ul>
+                <li>Enable the application to function (recording and displaying your sessions)</li>
+                <li>Generate personalized analysis and advice via our AI Coach</li>
+                <li>Save your preferences and settings</li>
+                <li>Improve the application (anonymous usage statistics)</li>
+            </ul>
 
-        <h2>6. Partage des données</h2>
-        <p>Nous ne vendons jamais vos données. Vos données peuvent être partagées uniquement avec :</p>
-        <ul>
-            <li><strong>Supabase :</strong> Notre hébergeur de base de données</li>
-            <li><strong>Anthropic :</strong> Pour les fonctionnalités d'IA (Claude API)</li>
-        </ul>
-        <p>Ces partenaires sont soumis à des obligations de confidentialité strictes.</p>
+            <h2>4. Artificial Intelligence</h2>
+            <p>Our application uses the Anthropic Claude API to generate personalized analysis and advice. When you use the AI Coach or dictation features:</p>
+            <ul>
+                <li>Your session content is sent to the API for analysis</li>
+                <li>This data is processed securely and is not used to train models</li>
+                <li>Anthropic commits to not retaining your data beyond the processing of the request</li>
+            </ul>
 
-        <h2>7. Durée de conservation</h2>
-        <p>Vos données sont conservées tant que votre compte est actif. En cas de suppression de compte, toutes vos données sont définitivement effacées sous 30 jours.</p>
+            <h2>5. Where is your data stored?</h2>
+            <p>Your data is stored securely on Supabase servers, hosted in the European Union. Communications are encrypted via HTTPS.</p>
 
-        <h2>8. Vos droits</h2>
-        <p>Conformément au RGPD, vous disposez des droits suivants :</p>
-        <ul>
-            <li><strong>Accès :</strong> Consulter toutes vos données dans l'application</li>
-            <li><strong>Rectification :</strong> Modifier vos sessions et informations</li>
-            <li><strong>Suppression :</strong> Supprimer votre compte et toutes vos données depuis l'application (Profil > Supprimer mon compte)</li>
-            <li><strong>Portabilité :</strong> Demander une copie de vos données par email</li>
-        </ul>
+            <h2>6. Data sharing</h2>
+            <p>We never sell your data. Your data may only be shared with:</p>
+            <ul>
+                <li><strong>Supabase:</strong> Our database hosting provider</li>
+                <li><strong>Anthropic:</strong> For AI features (Claude API)</li>
+            </ul>
+            <p>These partners are subject to strict confidentiality obligations.</p>
 
-        <h2>9. Sécurité</h2>
-        <p>Nous mettons en œuvre des mesures de sécurité appropriées :</p>
-        <ul>
-            <li>Chiffrement des données en transit (HTTPS/TLS)</li>
-            <li>Authentification sécurisée</li>
-            <li>Accès restreint aux bases de données</li>
-        </ul>
+            <h2>7. Data retention</h2>
+            <p>Your data is retained as long as your account is active. If you delete your account, all your data is permanently erased within 30 days.</p>
 
-        <h2>10. Mineurs</h2>
-        <p>L'application n'est pas destinée aux enfants de moins de 13 ans. Si vous êtes parent et pensez que votre enfant nous a fourni des données personnelles, contactez-nous.</p>
+            <h2>8. Your rights</h2>
+            <p>In accordance with the GDPR, you have the following rights:</p>
+            <ul>
+                <li><strong>Access:</strong> View all your data within the application</li>
+                <li><strong>Rectification:</strong> Edit your sessions and information</li>
+                <li><strong>Deletion:</strong> Delete your account and all your data from the application (Profile &gt; Delete my account)</li>
+                <li><strong>Portability:</strong> Request a copy of your data by email</li>
+            </ul>
 
-        <h2>11. Modifications</h2>
-        <p>Nous pouvons mettre à jour cette politique. En cas de modification significative, vous serez informé via l'application.</p>
+            <h2>9. Security</h2>
+            <p>We implement appropriate security measures:</p>
+            <ul>
+                <li>Data encryption in transit (HTTPS/TLS)</li>
+                <li>Secure authentication</li>
+                <li>Restricted access to databases</li>
+            </ul>
 
-        <div class="contact">
-            <h2>12. Contact</h2>
-            <p>Pour toute question concernant vos données personnelles :</p>
-            <p>📧 Email : <a href="mailto:jmontier.pro@gmail.com">jmontier.pro@gmail.com</a></p>
+            <h2>10. Children</h2>
+            <p>The application is not intended for children under 13 years of age. If you are a parent and believe your child has provided us with personal data, please contact us.</p>
+
+            <h2>11. Changes</h2>
+            <p>We may update this policy. In the event of significant changes, you will be notified via the application.</p>
+
+            <div class="contact">
+                <h2>12. Contact</h2>
+                <p>For any questions regarding your personal data:</p>
+                <p>Email: <a href="mailto:contact.mytenniscoach@gmail.com">contact.mytenniscoach@gmail.com</a></p>
+            </div>
+        </div>
+
+        <!-- FRENCH VERSION -->
+        <div id="lang-fr" class="lang-section">
+            <h1>Politique de Confidentialit&eacute;</h1>
+            <p class="app-name">My Tennis Coach</p>
+            <p class="update-date">Derni&egrave;re mise &agrave; jour : Avril 2026</p>
+
+            <div class="highlight">
+                <strong>En r&eacute;sum&eacute; :</strong> Nous collectons uniquement les donn&eacute;es n&eacute;cessaires au fonctionnement de l'application. Vos donn&eacute;es ne sont jamais vendues ni partag&eacute;es avec des tiers &agrave; des fins commerciales.
+            </div>
+
+            <h2>1. Qui sommes-nous ?</h2>
+            <p>My Tennis Coach est une application mobile d&eacute;velopp&eacute;e pour aider les joueurs de tennis &agrave; suivre leurs sessions et progresser dans leur jeu. L'application est &eacute;dit&eacute;e par un d&eacute;veloppeur ind&eacute;pendant bas&eacute; en France.</p>
+
+            <h2>2. Quelles donn&eacute;es collectons-nous ?</h2>
+            <p>Nous collectons les donn&eacute;es suivantes :</p>
+            <ul>
+                <li><strong>Donn&eacute;es de compte :</strong> Adresse email (pour la cr&eacute;ation de compte et l'authentification)</li>
+                <li><strong>Donn&eacute;es de session :</strong> Type de session, surface, score, adversaire, notes personnelles, date et lieu</li>
+                <li><strong>Donn&eacute;es de pr&eacute;paration :</strong> Checklist personnalis&eacute;e, mantras, pr&eacute;f&eacute;rences</li>
+                <li><strong>Donn&eacute;es techniques :</strong> Identifiant unique de l'appareil, pour le bon fonctionnement de l'application</li>
+            </ul>
+
+            <h2>3. Comment utilisons-nous vos donn&eacute;es ?</h2>
+            <p>Vos donn&eacute;es sont utilis&eacute;es pour :</p>
+            <ul>
+                <li>Permettre le fonctionnement de l'application (enregistrement et affichage de vos sessions)</li>
+                <li>G&eacute;n&eacute;rer des analyses et conseils personnalis&eacute;s via notre Coach IA</li>
+                <li>Sauvegarder vos pr&eacute;f&eacute;rences et param&egrave;tres</li>
+                <li>Am&eacute;liorer l'application (statistiques anonymes d'utilisation)</li>
+            </ul>
+
+            <h2>4. Intelligence Artificielle</h2>
+            <p>Notre application utilise l'API Claude d'Anthropic pour g&eacute;n&eacute;rer des analyses et conseils personnalis&eacute;s. Lorsque vous utilisez les fonctionnalit&eacute;s de Coach IA ou de dict&eacute;e :</p>
+            <ul>
+                <li>Le contenu de vos sessions est envoy&eacute; &agrave; l'API pour analyse</li>
+                <li>Ces donn&eacute;es sont trait&eacute;es de mani&egrave;re s&eacute;curis&eacute;e et ne sont pas utilis&eacute;es pour entra&icirc;ner des mod&egrave;les</li>
+                <li>Anthropic s'engage &agrave; ne pas conserver vos donn&eacute;es au-del&agrave; du traitement de la requ&ecirc;te</li>
+            </ul>
+
+            <h2>5. O&ugrave; sont stock&eacute;es vos donn&eacute;es ?</h2>
+            <p>Vos donn&eacute;es sont stock&eacute;es de mani&egrave;re s&eacute;curis&eacute;e sur les serveurs de Supabase, h&eacute;berg&eacute;s dans l'Union Europ&eacute;enne. Les communications sont chiffr&eacute;es via HTTPS.</p>
+
+            <h2>6. Partage des donn&eacute;es</h2>
+            <p>Nous ne vendons jamais vos donn&eacute;es. Vos donn&eacute;es peuvent &ecirc;tre partag&eacute;es uniquement avec :</p>
+            <ul>
+                <li><strong>Supabase :</strong> Notre h&eacute;bergeur de base de donn&eacute;es</li>
+                <li><strong>Anthropic :</strong> Pour les fonctionnalit&eacute;s d'IA (Claude API)</li>
+            </ul>
+            <p>Ces partenaires sont soumis &agrave; des obligations de confidentialit&eacute; strictes.</p>
+
+            <h2>7. Dur&eacute;e de conservation</h2>
+            <p>Vos donn&eacute;es sont conserv&eacute;es tant que votre compte est actif. En cas de suppression de compte, toutes vos donn&eacute;es sont d&eacute;finitivement effac&eacute;es sous 30 jours.</p>
+
+            <h2>8. Vos droits</h2>
+            <p>Conform&eacute;ment au RGPD, vous disposez des droits suivants :</p>
+            <ul>
+                <li><strong>Acc&egrave;s :</strong> Consulter toutes vos donn&eacute;es dans l'application</li>
+                <li><strong>Rectification :</strong> Modifier vos sessions et informations</li>
+                <li><strong>Suppression :</strong> Supprimer votre compte et toutes vos donn&eacute;es depuis l'application (Profil &gt; Supprimer mon compte)</li>
+                <li><strong>Portabilit&eacute; :</strong> Demander une copie de vos donn&eacute;es par email</li>
+            </ul>
+
+            <h2>9. S&eacute;curit&eacute;</h2>
+            <p>Nous mettons en &oelig;uvre des mesures de s&eacute;curit&eacute; appropri&eacute;es :</p>
+            <ul>
+                <li>Chiffrement des donn&eacute;es en transit (HTTPS/TLS)</li>
+                <li>Authentification s&eacute;curis&eacute;e</li>
+                <li>Acc&egrave;s restreint aux bases de donn&eacute;es</li>
+            </ul>
+
+            <h2>10. Mineurs</h2>
+            <p>L'application n'est pas destin&eacute;e aux enfants de moins de 13 ans. Si vous &ecirc;tes parent et pensez que votre enfant nous a fourni des donn&eacute;es personnelles, contactez-nous.</p>
+
+            <h2>11. Modifications</h2>
+            <p>Nous pouvons mettre &agrave; jour cette politique. En cas de modification significative, vous serez inform&eacute; via l'application.</p>
+
+            <div class="contact">
+                <h2>12. Contact</h2>
+                <p>Pour toute question concernant vos donn&eacute;es personnelles :</p>
+                <p>Email : <a href="mailto:contact.mytenniscoach@gmail.com">contact.mytenniscoach@gmail.com</a></p>
+            </div>
         </div>
     </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-section').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            document.querySelectorAll('.lang-switcher a').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            document.getElementById('lang-' + lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+            document.documentElement.lang = lang === 'fr' ? 'fr' : 'en';
+        }
+    </script>
 </body>
 </html>
